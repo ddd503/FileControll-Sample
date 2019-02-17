@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FileControll_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="総ファイル数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mo3-K1-h3M">
+                                <rect key="frame" x="108.5" y="84.5" width="158.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NHb-Rw-Ihm">
+                                <rect key="frame" x="179" y="134" width="17" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sr2-FC-i9g">
+                                <rect key="frame" x="62.5" y="175" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="bIN-mT-3yQ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ozG-2G-8eL"/>
+                                </constraints>
+                                <state key="normal" title="ファイル削除"/>
+                                <connections>
+                                    <action selector="removeFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R2O-Lf-rra"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Api-zt-2Ud">
+                                <rect key="frame" x="212.5" y="175" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Hqx-Pb-CPC"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="X0n-3t-4fw"/>
+                                </constraints>
+                                <state key="normal" title="ファイル追加"/>
+                                <connections>
+                                    <action selector="createFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wcQ-Ou-yHn"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="編集ファイル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DZ-Pt-bwk">
+                                <rect key="frame" x="62.5" y="256.5" width="104" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YUI-OE-nTl">
+                                <rect key="frame" x="212.5" y="252" width="100" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="L92-XR-SYX">
+                                <rect key="frame" x="56.5" y="300" width="262.5" height="200.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jL-vW-xLZ">
+                                <rect key="frame" x="137.5" y="540.5" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ieT-Kf-eze"/>
+                                    <constraint firstAttribute="height" constant="50" id="vJS-yg-bTV"/>
+                                </constraints>
+                                <state key="normal" title="テキスト追加"/>
+                                <connections>
+                                    <action selector="editFile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YlQ-SG-kU7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.68621604759999999" blue="0.67399835470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YUI-OE-nTl" firstAttribute="trailing" secondItem="Api-zt-2Ud" secondAttribute="trailing" id="3MG-aw-vkD"/>
+                            <constraint firstItem="NHb-Rw-Ihm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.45" id="3PT-cs-Uba"/>
+                            <constraint firstItem="9DZ-Pt-bwk" firstAttribute="leading" secondItem="Sr2-FC-i9g" secondAttribute="leading" id="9pA-m9-To7"/>
+                            <constraint firstItem="Mo3-K1-h3M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.3" id="BFi-3o-ikx"/>
+                            <constraint firstItem="9DZ-Pt-bwk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.8" id="BuI-Ft-c7M"/>
+                            <constraint firstItem="NHb-Rw-Ihm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dub-4F-e9c"/>
+                            <constraint firstItem="Api-zt-2Ud" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.4" id="Ewi-1c-4g6"/>
+                            <constraint firstItem="YUI-OE-nTl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="9DZ-Pt-bwk" secondAttribute="trailing" constant="8" symbolic="YES" id="Fpq-OV-FUY"/>
+                            <constraint firstItem="Sr2-FC-i9g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.6" id="NjY-Nn-OXL"/>
+                            <constraint firstItem="5jL-vW-xLZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RlD-kh-lc7"/>
+                            <constraint firstItem="Api-zt-2Ud" firstAttribute="centerY" secondItem="Sr2-FC-i9g" secondAttribute="centerY" id="TkF-iz-eOC"/>
+                            <constraint firstItem="L92-XR-SYX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="U88-7M-zCT"/>
+                            <constraint firstItem="L92-XR-SYX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.2" id="Y3S-7j-05y"/>
+                            <constraint firstItem="L92-XR-SYX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z1c-Xy-A3k"/>
+                            <constraint firstItem="5jL-vW-xLZ" firstAttribute="top" secondItem="L92-XR-SYX" secondAttribute="bottom" constant="40" id="czZ-CI-0Q3"/>
+                            <constraint firstItem="YUI-OE-nTl" firstAttribute="centerY" secondItem="9DZ-Pt-bwk" secondAttribute="centerY" id="eef-bS-jgg"/>
+                            <constraint firstItem="Mo3-K1-h3M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gPT-NE-1X5"/>
+                            <constraint firstItem="YUI-OE-nTl" firstAttribute="leading" secondItem="Api-zt-2Ud" secondAttribute="leading" id="qdY-Pa-4yf"/>
+                            <constraint firstItem="Sr2-FC-i9g" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="0.6" id="tWy-j6-siF"/>
+                            <constraint firstItem="L92-XR-SYX" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="xWz-Ma-EeH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="fileCountLabel" destination="NHb-Rw-Ihm" id="dxb-dj-gD3"/>
+                        <outlet property="saveTextView" destination="L92-XR-SYX" id="iME-ae-dbo"/>
+                        <outlet property="textField" destination="YUI-OE-nTl" id="gc8-Xa-E3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>
